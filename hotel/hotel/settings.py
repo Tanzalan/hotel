@@ -121,8 +121,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-<<<<<<< HEAD
 
-# Fuck You
-=======
->>>>>>> 37942643038b034c244a3cf8d5be1a3c6549aae5
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR,'assets'),
+)
+
+

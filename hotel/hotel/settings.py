@@ -120,4 +120,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-Fuck You
+# Fuck You

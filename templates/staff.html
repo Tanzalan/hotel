@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+		{% for x in x %}
+<!DOCTYPE html>
+<html>
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Torquay Hotel</title>
+	</head>
+<body>
+
+<div class="container-fluid">
+
+	<ul class="list-group">
+		<li class="list-group-item"> x: {{ x[2] }} <a href="url_for" class="btn btn-warning"> View Bookings </a> </li>
+		<li class="list-group-item"> x: {{ x[2] }} <a href="url_for" class="btn btn-warning"> modify Bookings </a> </li>
+		<li class="list-group-item"> x: {{ x[2] }} <a href="url_for" class="btn btn-warning"> Messages </a> </li>
+		<li class="list-group-item"> x: {{ x[2] }} <a href="url_for" class="btn btn-warning"> Delete Reviews </a> </li>
+	</ul>
+</div>
+
+</body>
+</html>
+
+{% endfor %}
+
+{% endblock %} 

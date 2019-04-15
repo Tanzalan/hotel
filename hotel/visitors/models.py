@@ -15,4 +15,5 @@ class Booking(models.Model):
 class Room(models.Model):
 	room_number = models.IntegerField(default=0)
 	price = models.IntegerField(default=0)
+	cover = models.CharField(max_length=200)
 

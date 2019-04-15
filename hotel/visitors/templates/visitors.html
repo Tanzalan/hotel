@@ -1,18 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
 
-{% block title %} Visitors  {% endblock %}
+{% block title %} Rooms  {% endblock %}
 
-<div class="container">
+
+<div class="container mt-4">
 	<p> This is the Torqauy Hotel. We are so cool I love this hotel is is so bangin' if you hatin' you can leave!</p>
 
-	<ul class="list-group">
-		<!--- ASk Yair if this can be done more efficiently--->
-		<li class="list-group-item"><a href="url_for" class="btn btn-warning"> Vacancies </a> </li>
-		<li class="list-group-item"><a href="url_for" class="btn btn-warning"> Book </a> </li>
-		<li class="list-group-item"><a href="url_for" class="btn btn-warning"> Request INfo </a> </li>
-		<li class="list-group-item"><a href="url_for" class="btn btn-warning"> write review </a> </li>
-	</ul>
+	{% for room in rooms %}
+		<ul class="list-group mt-4">
+				<li class="list-group-item d-flex justify-content-between align-items-center" style="color:black"><img src={{room.cover}} width="100">
+				<b>Room Number - {{ room.room_number }}</b>  <b> Price per Room:{{ room.price }}</b>
+				<h3><span class="badge badge-secondary" style="color:yellow"> {{ review.rating}} </span></h3>
+				</li>
+			</a>
+		</ul>
+
+	{% endfor %}
 </div>
 
 {% endblock %} 

@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
+from .models import Room
 # Create your views here.
 
 def index(request):
@@ -10,7 +11,12 @@ def index(request):
 
 
 def visitors(request):
-	return render(request, 'visitors.html')
+	rooms = Room.objects.all()
+	
+	context = {
+		'rooms' : rooms
+	}
+	return render(request, 'visitors.html', context)
 
 
 def hotel(request):

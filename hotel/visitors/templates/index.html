@@ -1,0 +1,69 @@
+{% extends 'base.html' %}	
+{% block content %}
+{% block title %}   {% endblock %}
+{% load static from staticfiles %}
+<div class="bigBox">
+	<div class="smallBox">
+		<img src="{% static 'barman.jpg' %}">
+		<div class="textdecoration">	
+			<h1> YOUR FIRST CHOICE </h1>
+		</div>
+	</div>
+
+
+<!-- build a form -->
+	<form method="POST">
+		<table>
+			<tbody>
+				{{ form }}
+				{% csrf_token %}
+			</tbody>
+		</table>
+		<div>
+			<button type="submit"> Check </button>
+		</div>
+	</form>
+
+
+
+	<div class="threebox">
+		<div class="column">
+			<div class="miniImage">
+				<img src="{% static 'imgleft.png' %}">
+			</div>
+		</div>
+
+		<div class="column">
+			<div class="miniImage">
+				<img src="{% static 'imgmiddle.png' %}">
+			</div>
+		</div>
+
+		<div class="column">
+			<div class="miniImage">
+				<img src="{% static 'imgright.png' %}">
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+
+	<a href="{% url 'visitors:all_room' %}"><button class="button"> All available Rooms >> </button></a>
+
+
+ <div class="containeer">
+  <img src="{% static 'beach.jpg' %}" alt="Snow" style="width:80%;">
+
+  <div class="centered">
+  	<h3><b> MIXING BUSINESS WITH PLEASURE </b></h3>
+  	<p> 
+  		With every professional convenience at your disposal, from open office space to a luxurious conference room, in-room WiFi to computer terminals, our business guests can get down to work, undisturbed. After hours, our one of the best hotels in Tel Aviv propose you to enjoy a refreshing cocktail, unwind with a dip in our rooftop pool, or step out into the best of city life, Tel Aviv style. 
+  	</p>
+  	<a href="{% url 'visitors:info' %}"><button class="button"> More Info >> </button></a>
+  </div>
+</div> 
+
+
+</div>
+
+
+{% endblock %} 

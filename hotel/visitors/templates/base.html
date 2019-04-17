@@ -17,25 +17,29 @@
 </head>
 <body>
   {% block nav %}
-  <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">
-      <img src="" />
-      Hotel
-    </a>
-    <div class="navbar nav-item">
-      <div class="nav-item">
 
-      </div>
-      {% if request.user.is_authenticated %}
-        <div class="navbar nav-item">
-          <span class="nav-item text-light font-weight-bold">{{ request.user.username }}</span>
-          <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
-        </div>
-      {% else %}
-        <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
-      {% endif %}
-    </div>
-  </nav>
+<!-- NavBar -->
+{% if request.user.is_authenticated %}
+    <span class="nav-item text-light font-weight-bold">{{ request.user.username }}</span>
+    <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+{% else %}
+
+<div class="Navbar">
+    <ul>
+        <a href="{% url 'visitors:index' %}"><img src="{% static 'logo.png' %}" width="120"></a>
+        <li><a href="#">| Special Package | </a></li>
+        <li><a href="{% url 'visitors:all_room' %}">| Rooms |</a></li>
+        <li><a href="#">| Service |</a></li>
+        <li><a href="#">| Business |</a></li>
+        <li><a href="#">| Dining |</a></li>
+        <li><a href="#">| Gallary |</a></li>
+        <li><a href="#">| Blog |</a></li>
+        <li><a href="#">| Contact |</a></li>
+        <li><a href="{% url 'login' %}">Login</a></li>
+         {% endif %}
+    </ul>
+</div>
+
   {% endblock %}
   {% block content %}{% endblock %}
 </body>

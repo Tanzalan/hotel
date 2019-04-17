@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+{% block title %} Booking {% endblock %}
+{{room.room}}
+<div class="container">
+	{% for room in rooms %}
+		{{room}}
+		{%endfor%}
+
+<h1> Book Your Stay </h1>
+
+{% endblock %} 

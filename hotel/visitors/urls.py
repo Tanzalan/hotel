@@ -5,7 +5,9 @@ from . import views
 app_name = 'visitors'
 urlpatterns = [
 	path('', views.index, name='index'),
-	path('visitors/', views.visitors, name='visitors'),
-	path('hotel/', views.hotel, name='hotel'),
-	path('staff/', views.staff, name='staff'),
+	path('rooms/', views.all_room, name='all_room'),
+	path('room/<int:room_id>', views.the_room, name='the_room'),
+	path('dates/', views.show_vacancies, name='show_vacancies'),
+	path('info/', views.info, name='info'),
+
 ]

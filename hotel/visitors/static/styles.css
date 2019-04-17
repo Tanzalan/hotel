@@ -1,27 +1,110 @@
-.svg-icon {
-	margin: 0 4px 8px 0;
+/*Navbar*/
+
+.Navbar{
+	width:100%;
 }
 
-.recipe-image {
-	height: 320px;
-	width: 320px;
+
+ul{
+	list-style-type:none;
 }
 
-.ingredients-text {
-	white-space: pre-wrap;
-	margin-left: 3%;
-	color: gold;
-}
-
-body{
-background-color:#0f121f;
-background-image:url(/static/stars.jpg);
-color:#fff;
-
-}
-
-a, a:hover, a:visited{
-	color:#fff;
+li{
+	margin-left:30px;
+	display:inline;
 	text-decoration:none;
 }
 
+a{
+	margin:0 auto;
+	cursor:pointer;
+	margin:5px;
+	color:#5f5f5f;
+	text-decoration:none;
+
+}
+
+a:active {
+  color: blue;
+}
+
+/* Home Page */
+
+.smallBox{
+	margin:10%;
+	margin-top:100px;
+	width:80%;
+	height:400px;
+}
+
+.bigBox{
+	text-align:center;	
+}
+
+.bigBox img{
+	width:100%;
+	height:100%;
+}
+
+.textdecoration{
+	padding:60px;
+}
+
+.textdecoration h1{
+	font-size:55px;
+	color:#B5985A;
+	font-weight:bold;
+	letter-spacing: 0.0625em;
+}
+
+.column{
+	float:left;
+	width:33.33%;
+	padding:5px;
+}
+
+.threebox{
+	position:relative;
+	color:black;
+	margin:10%;
+	width:80%;
+	display:block;
+}
+
+.miniImage:hover {
+    position:relative;
+    top:-25px;
+    left:-35px;
+    width:400px;
+    height:auto;
+    display:block;
+    z-index:600;
+}
+
+.clear{
+	clear:both;
+}
+
+.button{
+	margin-top:50px;
+	background-color:#B5985A;
+	color:#ffff;
+	padding: 10px 28px;
+}
+
+/* info Pic */
+.containeer {
+	margin-top:20px;
+  	position: relative;
+  	text-align: center;
+  	color: white;
+  	height:400px;
+}
+
+.centered {
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	line-height:2.0;
+}

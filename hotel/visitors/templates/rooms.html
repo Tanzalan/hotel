@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% block title %}  {% endblock %}
+
+
+<div class="container mt-4">
+	{% for room in rooms %}
+		<ul class="list-group mt-4">
+				<li class="list-group-item d-flex justify-content-between align-items-center" style="color:black">
+					<img src={{room.cover}} width="100">
+					<b>Room Number - {{ room.room_number }}</b>  
+					<b> Price per Room:{{ room.price }}</b>
+					<a href="{% url 'visitors:the_room' room_id=room.id %}"> Details </a>
+				</li>
+		</ul>
+
+	{% endfor %}
+</div>
+
+{% endblock %} 
